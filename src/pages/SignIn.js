@@ -8,6 +8,17 @@ export default class SignIn extends Component {
             userName: null , 
             password : null 
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(e) {
+        let target = e.target;
+        let value = target.type === target.value;
+        let name = target.name;
+
+        this.setState({
+          [name]: value
+        });
     }
     render() {
         return (
@@ -16,11 +27,11 @@ export default class SignIn extends Component {
               <div className="FormField">
               <div className="FormField">
                 <label className="FormField__Label"  htmlFor="username">نام کاربری</label>
-                <input type="text" id="username" className="FormField__Input" placeholder="نام کاربری خود را وارد کنید" name="userName" value = {this.state.userName}/>
+                <input type="text" id="username" className="FormField__Input" placeholder="نام کاربری خود را وارد کنید" name="userName" value = {this.state.userName} onChange={this.handleChange}/>
               </div>
               <div className="FormField">
                 <label className="FormField__Label"  htmlFor="password">گذرواژه</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="گذرواژه خود را وارد کنید" name="password" value = {this.state.password}/>
+                <input type="password" id="password" className="FormField__Input" placeholder="گذرواژه خود را وارد کنید" name="password" value = {this.state.password} onChange={this.handleChange}/>
               </div>
 
                 <div className="FormField">
