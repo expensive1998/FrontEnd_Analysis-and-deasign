@@ -8,8 +8,10 @@ export default class SignIn extends Component {
             userName: null , 
             password : null 
         }
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
 
     handleChange(e) {
         let target = e.target;
@@ -20,10 +22,17 @@ export default class SignIn extends Component {
           [name]: value
         });
     }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        console.log('The form was submitted with the following data:');
+        console.log(this.state);
+    }
     render() {
         return (
             <div className = "FormCenter">
-            <form  className="FormFields">
+            <form  className="FormFields" onSubmit = {this.handleSubmit}>
               <div className="FormField">
               <div className="FormField">
                 <label className="FormField__Label"  htmlFor="username">نام کاربری</label>

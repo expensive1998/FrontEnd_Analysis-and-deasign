@@ -15,6 +15,7 @@ export default class SignUp extends Component {
             address: null
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     handleChange(e) {
         let target = e.target;
@@ -25,10 +26,18 @@ export default class SignUp extends Component {
           [name]: value
         });
     }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        console.log('The form was submitted with the following data:');
+        console.log(this.state);
+    }
+
     render() {
         return (
             <div className = "FormCenter">
-            <form  className="FormFields">
+            <form  className="FormFields" onSubmit = {this.handleSubmit}>
               <div className="FormField">
                 <label className="FormField__Label"  htmlFor="firstname">نام</label>
                 <input type="text" id="firstname" className="FormField__Input" placeholder="نام خود را وارد کنید" name="firstName" value = {this.state.firstName} onChange={this.handleChange}/>
