@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import MainPage from './MainPage';
+import {BrowserRouter as Router , Route , Switch , Link , Redirect } from 'react-router-dom';
 import './App.css';
 import './MainPage.js';
-import './MainNav.js'
+import './MainNav.js';
+import './components/WriteInBook';
+import WriteInPage from './components/WriteInBook';
 
 class App extends Component{
   render(){
     return (
-      <div className="App">
-        <MainPage />
-      </div>
+      <Router>
+        <Route exact path ="/" component={MainPage} />
+        <Route exact path="/writein" component={WriteInPage}/>
+      </Router>
     );
   }
 }
