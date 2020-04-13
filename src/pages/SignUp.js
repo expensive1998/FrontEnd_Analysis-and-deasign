@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&â€™*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-const numberRegex = RegExp(/^[0-9]*$/);
+const numberRegex = RegExp(/^\d+$/);
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
@@ -87,26 +87,26 @@ export default class SignUp extends Component {
           break;
       case "address":
           formErrors.address =  
-          value.length < 10 ? "لطفا حداقل 10 کارکتر وارد کنید" : ""; 
+          value.length < 10 ? "لطفا آدرس وارد شده صحیح و حداقل شامل 10 حرف باشد" : ""; 
           break;    
       case "email":
         formErrors.email = emailRegex.test(value)
           ? ""
-          : "لطفا ایمیل صحیحی را وارد کنید";
+          : "لطفا ایمیل صحیح و کامل وارد کنید";
         break;
         case "phonenumber":
-          formErrors.phonenumber = numberRegex.test(value)
+          formErrors.phonenumber = numberRegex.test(value) && value.length === 11 
             ? ""
-            : "لطفا فقط عدد وارد کنید";
+            : "لطفا شماره همراه خود را صحیح . کامل وارد کنید";
           break;  
           case "postalcode":
-            formErrors.postalcoder = numberRegex.test(value)
+            formErrors.postalcode = numberRegex.test(value) && value.length === 10
               ? ""
-              : "لطفا فقط عدد وارد کنید";
+              : "کد پستی باید 10 رقمی و فقط شامل عدد باشد";
             break;          
       case "password":
         formErrors.password =
-        value.length < 6 ? "حداقل باید 6 کارکتر داشته باشید" : "";
+        value.length < 8 ? "گذرواژه حداقل باید 8 کارکتر داشته باشید" : "";
         break;
       default:
         break;
@@ -161,7 +161,7 @@ export default class SignUp extends Component {
               </div>
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="phonenumber">شماره تماس</label>
-                <input type="number" id="phonenumber" className={formErrors.phonenumber.length > 0 ? "error FormField__Input" : "FormField__Input"} placeholder="شماره تماس خود را وارد کنید" name="phonenumber" noValidate
+                <input type="text" id="phonenumber" className={formErrors.phonenumber.length > 0 ? "error FormField__Input" : "FormField__Input"} placeholder="شماره همراه خود را با الگو 0912xxxxxxx وارد کنید" name="phonenumber" noValidate
                 onChange={this.handleChange} />
                 <br/>{formErrors.phonenumber.length > 0 && (
                 <span className="errorMessage">{formErrors.phonenumber}</span>)}
@@ -175,7 +175,7 @@ export default class SignUp extends Component {
               </div>
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="address">آدرس</label>
-                <textarea rows= "4" id="address"className={formErrors.address.length > 0 ? "error FormField__Input" : "FormField__Input"} placeholder="آدرس خود را وارد کنید" name="address" noValidate
+                <textarea rows= "4" id="address"className={formErrors.address.length > 0 ? "error FormField__Input" : "FormField__Input"} placeholder='آدرس خود را با الگو "استان-شهر-آدرس محل سکونت" وارد کنید' name="address" noValidate
                 onChange={this.handleChange} />
                 <br/> {formErrors.address.length > 0 && (
                 <span className="errorMessage">{formErrors.address}</span>)}
