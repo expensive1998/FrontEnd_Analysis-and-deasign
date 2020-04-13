@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter as Router ,Route, NavLink} from 'react-router-dom'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
+import exitIcon from  './Assets/Imgs/exit_icon.png'
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
               ثبت نام
             </NavLink>
           </div>
-
+          
+          <a href = "#" > <img className = "Exit_Icon" src = {exitIcon} alt ="exit icon"/> </a>
+          
           <Route exact path = "/" component={SignUp}></Route>
           
           <Route  path ="/sign-in" component = {SignIn}></Route>

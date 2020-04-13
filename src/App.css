@@ -2,6 +2,8 @@
   height: 100vh;
   display: flex;
   color: white;
+  border-radius: 5%;
+  box-shadow: 0 0 5px 0 black;
 }
 
 .App__Aside {
@@ -14,6 +16,15 @@
   background-color: #2E4158;
   padding: 25px 40px;
   overflow: auto;
+  position: relative;
+}
+.Exit_Icon{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
 }
 
 .FormCenter {

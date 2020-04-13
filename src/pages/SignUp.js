@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+//import exitIcon from  '../Assets/Imgs/exit_icon.png'
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&â€™*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
@@ -120,7 +121,9 @@ export default class SignUp extends Component {
 
 
         return (
-<div className="FormCenter">
+          <>
+      
+          <div className="FormCenter">
             <form  className="FormFields" onSubmit={this.handleSubmit} noValidate>
               <div className="FormField">
                 <label className="FormField__Label"  htmlFor="firstname">نام</label>
@@ -186,6 +189,7 @@ export default class SignUp extends Component {
             </form>
 
           </div>
+          </>
         )
     }
 }
