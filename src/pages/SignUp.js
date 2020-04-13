@@ -95,12 +95,12 @@ export default class SignUp extends Component {
       case "email":
         formErrors.email = emailRegex.test(value)
           ? ""
-          : "لطفا ایمیل صحیح و کامل وارد کنید";
+          : "لطفا ایمیل را صحیح و کامل وارد کنید";
         break;
         case "phonenumber":
           formErrors.phonenumber = numberRegex.test(value) && value.length === 11 
             ? ""
-            : "لطفا شماره همراه خود را صحیح . کامل وارد کنید";
+            : "لطفا شماره همراه خود را صحیح و کامل وارد کنید";
           break;  
           case "postalcode":
             formErrors.postalcode = numberRegex.test(value) && value.length === 10

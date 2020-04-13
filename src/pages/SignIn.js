@@ -28,6 +28,7 @@ export default class SignIn extends Component {
          
           username: null,
           password: null,
+          loged : false  ,
           formErrors: {
             username: "",
             password: ""
@@ -35,17 +36,30 @@ export default class SignIn extends Component {
         };
       }
     
-      handleSubmit = e => {
+      handleSubmit = async(e) => {
         e.preventDefault();
-    
-        if (formValid(this.state)) {
-          console.log(`
-            --SUBMITTING--       
-            UserName: ${this.state.username}
-            Password: ${this.state.password}
-          `);
-        } else {
-         alert("لطفا فرم را درست پر کنید")
+        
+        let x = await fetch('/api/Users/token/', {
+          mode: "cors",
+          method: 'POST',
+          body: JSON.stringify({
+              username: this.state.username,
+              password: this.state.password
+          }),
+          headers: {
+              "Content-type": "application/json;charset=UTF-8"
+          }
+      })
+      x = await x.json()
+
+        if (typeof (x.token) !== formValid(this.state)) 
+          alert("لطفا فرم را درست پر کنید")
+         else {
+            localStorage.setItem('token', x.token)
+            localStorage.setItem('kind', x.kind)
+            this.setState({
+                loged: true
+            })
         }
       };
     
