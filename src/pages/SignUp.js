@@ -31,6 +31,7 @@ export default class SignUp extends Component {
       username: null,
       email: null,
       password: null,
+      confirmpassword: null ,
       postalcode: null,
       phonenumber: null,
       address: null ,
@@ -40,6 +41,7 @@ export default class SignUp extends Component {
         username: "",
         email: "",
         password: "",
+        confirmpassword: "",
         postalcode: "" ,
       phonenumber: "",
       address: "" ,
@@ -64,7 +66,7 @@ export default class SignUp extends Component {
 
       `);
     } else {
-      alert("اطفا فرم را کامل و درست پر کنید")
+      alert("لطفا فرم را کامل و درست پر کنید")
     }
   };
 
@@ -109,6 +111,11 @@ export default class SignUp extends Component {
         formErrors.password =
         value.length < 8 ? "گذرواژه حداقل باید 8 کارکتر داشته باشید" : "";
         break;
+        break;          
+        case "confirmpassword":
+          formErrors.confirmpassword = value !== this.state.password
+         ? "گذرواژه مطابقت ندارد" : "";
+          break;
       default:
         break;
     }
@@ -154,6 +161,13 @@ export default class SignUp extends Component {
                 onChange={this.handleChange} />
                 <br/> {formErrors.password.length > 0 && (
                 <span className="errorMessage">{formErrors.password}</span>)}
+              </div>
+              <div className="FormField">
+                <label className="FormField__Label" htmlFor="confirmpassword">تایید گذرواژه</label>
+                <input type="password" id="confirmpassword" className={formErrors.confirmpassword.length > 0 ? "error FormField__Input" : "FormField__Input"} placeholder="گذرواژه خود را تکرار کنید" name="confirmpassword" noValidate
+                onChange={this.handleChange} />
+                <br/> {formErrors.confirmpassword.length > 0 && (
+                <span className="errorMessage">{formErrors.confirmpassword}</span>)}
               </div>
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="email">پست الکترونیک</label>
