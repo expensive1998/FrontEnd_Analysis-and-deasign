@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import MainPage from './MainPage';
 import {BrowserRouter as Router , Route , Switch , Link , Redirect } from 'react-router-dom';
 import './App.css';
-import './MainPage.js';
-import './MainNav.js';
-import './components/WriteInBook';
 import WriteInPage from './components/WriteInBook';
 
 class App extends Component{

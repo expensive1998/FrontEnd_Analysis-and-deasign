@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Permanent+Marker&family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap');
 
+
+/* MainPage CSS */
+
 .topmain {
   background-image: url("https://unsplash.com/photos/9pw4TKvT3po/download?force=true");
  /* background-image: url("Wallpaper.jpg");*/
@@ -146,4 +149,27 @@ li {
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+
+/* WriteIn Page CSS */
+
+.writeinbook {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  background-color: darkslategrey;
+}
+
+.formwibook {
+  padding: 20px;
+}
+
+.fieldset {
+  margin-bottom: 20px;
+}
+
+#publishdate {
+  margin-left: 20px;
 }
