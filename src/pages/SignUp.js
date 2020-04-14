@@ -51,23 +51,29 @@ export default class SignUp extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
-    if (formValid(this.state)) {
-      console.log(`
-        --SUBMITTING--
-        First Name: ${this.state.firstName}
-        Last Name: ${this.state.lastName}
-        User Name : ${this.state.username}
-        Email: ${this.state.email}
-        Password: ${this.state.password}
-        Postal Code: ${this.state.postalcode}
-        Phone Number: ${this.state.phonenumber}
-        Address:${this.state.address}
-
-      `);
-    } else {
-      alert("لطفا فرم را کامل و درست پر کنید")
+    
+    fetch('/api/Users/sign-up/', {
+      mode: "cors",
+      method: 'POST',
+      body: JSON.stringify({
+        firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      confirmpassword:  this.state.confirmpassword,
+      postalcode: this.state.postalcode,
+      phonenumber: this.state.phonenumber,
+      address:  this.state.address
+    }),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
     }
+}).then(response => {
+    return response.json()
+}).then(json => {
+    console.log(json)
+});
   };
 
   handleChange = e => {
