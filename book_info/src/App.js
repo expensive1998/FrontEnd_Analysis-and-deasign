@@ -14,7 +14,23 @@ function App() {
           <li><a href = "#">درباره ما</a></li>
         </ul>
       </div>
+      <div className = "fullPage">
+        
+        <div className = "bookInfo_box">
+          <div className = "bookPics"></div>
+        </div>
+        <div className = "moreInfo_box">
+          <div className = "mb_navbar">
+            <ul className = "mb_navLinks">
+              <li><a href = "#">معرفی کتاب</a></li>
+              <li><a href = "#">مشخصات</a></li>
+              <li><a href = "#">نظرات کاربران</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
+
   );
 }
 
