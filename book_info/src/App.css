@@ -4,7 +4,11 @@
   margin: 0;
   padding: 0;
 }
-
+body{
+  background-image: url(./Assets/Img/bg.png);
+  background-attachment: 
+;
+}
 .shlfNav{
   font-family: 'Charmonman', cursive;
   height: 70px;
@@ -42,6 +46,7 @@
   font-weight: bold;
 }
 .fullPage{
+  background-color: rgba(184, 23, 84, 0.342);
   width: 90%;
   height: 1000px;
   border: 5px solid green;
@@ -49,6 +54,7 @@
   margin :2% auto;
 }
 .bookInfo_box{
+
   position: relative;
   margin: 2% auto;
   width: 95%;
