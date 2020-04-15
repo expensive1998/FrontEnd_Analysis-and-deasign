@@ -9,9 +9,19 @@ class WriteInPage extends Component {
             <div className="writeinbook">
 
                 <div className="witopnav">
-
+                    <a href="/">خانه</a>
+                    <div className="navbar">
+                        <button class="dropbtn">Dropdown 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>    
+                    <a href="/"></a>
                 </div>
-
 
                 <div className="formwibook">
                     <fieldset className="fieldset">
@@ -36,28 +46,8 @@ class WriteInPage extends Component {
                             <label htmlFor="isbn">ISBN</label>
                             <input type="text" name="wibook" id="isbn"/><br/>
 
-                            <label htmlFor="publishdate"> تاریخ انتشار</label>
-                            <select name="wibook" id="publishdate">
-                                <option value=""></option>
-                            </select>
-                            <select name="wibook" id="publishdate">
-                                <option value="">فروردین</option>
-                                <option value="">اردیبهشت</option>
-                                <option value="">خرداد</option>
-                                <option value="">تیر</option>
-                                <option value="">مرداد</option>
-                                <option value="">شهریور</option>
-                                <option value="">مهر</option>
-                                <option value="">آبان</option>
-                                <option value="">آذر</option>
-                                <option value="">دی</option>
-                                <option value="">بهمن</option>
-                                <option value="">اسفند</option>
-                            </select>
-                            <select name="wibook" id="publishdate">
-
-                            </select>
                             
+                                                        
                             <label htmlFor="price">قیمت</label>
                             <input type="number" name="wibook" id="price"required placeholder="قیمت را وارد کنید"/><br/>
 
