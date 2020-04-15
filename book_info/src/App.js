@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
+
+const getRate = ({rating}) => console.log(rating);
 function App() {
   return (
     <>
+    
       <div className = "shlfNav"><h2>shlf</h2></div>
       <div className = "logo">
         <ul className = "navbar">
@@ -18,6 +23,7 @@ function App() {
         
         <div className = "bookInfo_box">
           <div className = "bookPics"></div>
+          <div className = "rating"> <Rater total={5} rating={0} onRate={getRate}/></div>
         </div>
         <div className = "moreInfo_box">
           <div className = "mb_navbar">
