@@ -151,5 +151,9 @@ input.star-2:checked ~ label.star::before{
 .rating{
   margin-left:78%;
   margin-top: 28%;
-  size: 3000px;
+}
+.hide_show{
+
+  margin-left: 53%;
+  
 }
