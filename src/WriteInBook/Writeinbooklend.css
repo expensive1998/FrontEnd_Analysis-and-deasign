@@ -4,7 +4,7 @@
 
 
 
-.sell:not(#lend) {
+.sell:not(#sell) {
     display: flex;
     direction: rtl;
     text-align: right;
@@ -17,15 +17,19 @@
     width: 96%;
 }
 
+#datelend  {
+    color: white;
+}
+
 #sell{
     color: white;
-    opacity: 1;
+    opacity: .5;
     margin-right: 20px;
     text-decoration: none;
 }
 
 #lend{
-    opacity: .5;
+    opacity: 1;
     color:wheat;
     text-decoration: none;
 }
