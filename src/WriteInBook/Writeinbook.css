@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+
+
+.writeinbook {
+    background-image: url('http://getwallpapers.com/wallpaper/full/2/a/6/165799.jpg');
+    background-size: auto ;
+}
+
+form {
+    display: block;
+    position: relative;
+    padding: 20px;
+}
+
+form::after {
+    background-color: gray;
+    background-origin: border-box;
+    opacity: 0.5;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute ;
+}
+
+.legend {
+    font-family: 'Reem Kufi', sans-serif;
+    display: block;
+    font-size: 28px;
+}
+
+.wibook-form {
+    line-height: 1.7;
+    border: 8px double black;
+    border-radius: 5%;
+    font-size: 18px;
+    width: 50%;
+    background-color: gray;
+    text-align: right;
+    margin-top: 100px;
+    margin-left: 700px;
+    padding: 40px;
+    direction: rtl;
+}
+
+input[name="wi-book"] {
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+}
