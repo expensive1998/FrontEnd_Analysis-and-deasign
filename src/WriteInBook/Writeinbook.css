@@ -9,29 +9,28 @@
     direction: rtl;
     text-align: right;
     font-size: 44px;
-    text-decoration: none;
     margin-top: 10px;
     margin-right: 20px;
-    color: white;
     font-family: 'Markazi Text', serif;
     width: 96%;
 }
 
-#sell{
+#sell1{
     color: white;
     opacity: 1;
     margin-right: 20px;
     text-decoration: none;
+    border-bottom: 1px solid white;
 }
 
-#lend{
-    opacity: .5;
-    color:wheat;
+#lend1{
+    opacity: 0.5;
+    color:white;
     text-decoration: none;
 }
 
 #or {
-    color: wheat;
+    color: white;
     opacity: .5;
     margin-left: 10px;
     margin-right: 10px;

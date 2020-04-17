@@ -64,13 +64,15 @@ class Wibook_lend extends Component {
                         <input type="text" name="wi-form" id="publisher" placeholder="نام ناشر را وارد کنید" autocomplete="off"/><br/>
                         <label id="label" htmlFor="price">قیمت</label><br/>
                         <input type="number" name="wi-form" id="price" required placeholder="قیمت را وارد کنید" autocomplete="off" /><br/>
+                        <br/>
                         <label id="label" htmlFor="img1">عکس کتاب (شماره۱)</label><br/>
                         <input type="file" id="img" name="wi-form" accept="image/*"/><br/>
                         <label id="label" htmlFor="img1">عکس کتاب (شماره۲)</label><br/>
                         <input type="file" id="img" name="wi-form" accept="image/*" /><br/>
                         
                         <label id="datelend" htmlFor="date-lend">تاریخ شروع اجاره</label>
-                        <input type="date" name="wi-form" id="date-lend" required/><br/>
+                        <input type="date" name="wi-form" id="date-lend" required/><br/><br/>
+                
                         <label id="datelend" htmlFor="date-lend">تاریخ شروع اجاره</label>
                         <input type="date" name="wi-form" id="date-lend" required/><br/>
 

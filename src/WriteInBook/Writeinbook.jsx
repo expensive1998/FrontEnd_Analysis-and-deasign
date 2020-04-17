@@ -36,9 +36,9 @@ class Wibook extends Component {
         <div className="writeinbook">
             <Writeinbooknavbar />
             <div className="sell">
-                <a id="sell" href="/writein">فروش</a>
+                <a id="sell1" href="/writein">فروش</a>
                 <p id="or">||</p>
-                <a id="lend" href="/Borrow">اجاره</a>
+                <a id="lend1" href="/Borrow">اجاره</a>
             </div>
             <div className="wibook-form">
                 <fieldset class="fieldset">
